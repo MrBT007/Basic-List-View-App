@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class MrBTAdapter(private val college: Array<dataCollege>) : BaseAdapter()
@@ -29,6 +30,12 @@ class MrBTAdapter(private val college: Array<dataCollege>) : BaseAdapter()
 
         collegeN.text = getItem(position).college
         name.text = getItem(position).Name
+
+        // for onItemCLickListener you have to make it before returning the view
+        convertView.setOnClickListener()
+        {
+            Toast.makeText(parent.context,"You clicked on "+position,Toast.LENGTH_SHORT).show()
+        }
         return convertView
     }
 

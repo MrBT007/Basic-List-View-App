@@ -2,8 +2,10 @@ package com.example.listviewapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 import java.util.ArrayList
 
 class MainActivity : AppCompatActivity()
@@ -15,9 +17,14 @@ class MainActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //   using android (built in) adapter
-        //   val ad = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arr)
-        //   listView.adapter = ad
+//           using android (built in) adapter
+//           val listView = findViewById<ListView>(R.id.list1)
+//           val ad = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arr)
+//           listView.adapter = ad
+//           listView.setOnItemClickListener(AdapterView.OnItemClickListener
+//           { adapterView, view, i, l ->
+//               Toast.makeText(this,"You clicked on "+i,Toast.LENGTH_SHORT).show()
+//           });
 
         // using Custom Adapter
 
